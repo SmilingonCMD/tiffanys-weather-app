@@ -18,7 +18,7 @@
         <form class="search-form">
           <input
             type="search"
-            placeholder="Enter a city.."
+            placeholder="Enter a city"
             required
             class="search-form-input"
           />
@@ -26,12 +26,17 @@
         </form>
       </header>
       <main>
-        <div>
-          <h1>Los Angeles</h1>
-          <p>Chance of rain: 0%</p>
+        <div class="current-weather-data">
+          <div>
+            <h1>Los Angeles</h1>
+            <p class="current-rain-data">Chance of rain: 0%</p>
+            <div class="current-temperature">
+              <div class="current-temperature-value">75</div>
+              <div class="current-temperature-unit">°F</div>
+            </div>
+          </div>
+          <div class="current-weather-icon">☀️</div>
         </div>
-        <div>75°</div>
-        <div>☀️</div>
       </main>
       <section>
         <div>WEEK FORECAST</div>
