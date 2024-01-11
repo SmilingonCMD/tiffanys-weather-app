@@ -1,9 +1,37 @@
 function updateWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
-  temperatureElement.innerHTML = Math.round(temperature);
   let cityElement = document.querySelector("#city");
+  let conditionELement = document.querySelector("#current-condition");
+  let timeElement = document.querySelector("#current-time");
+  let date = new Date(response.data.time * 1000);
+
+  timeElement.innerHTML = formatDate(date);
   cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = Math.round(temperature);
+  conditionELement.innerHTML = response.data.condition.description;
+}
+
+function formatDate(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
