@@ -15,10 +15,10 @@ body {
   background-color: #202b3b;
   color: white;
   border: none;
-  width: 80%;
-  padding: 15px 30px;
+  width: 85%;
+  padding: 10px 20px;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .search-form-button {
@@ -26,12 +26,12 @@ body {
   color: #b6b9bc;
   border: none;
   border-radius: 6px;
-  padding: 15px 30px;
-  font-size: 16px;
+  padding: 10px 20px;
+  font-size: 14px;
   margin-left: 5px;
 }
 main {
-  padding: 30px;
+  padding: 30px 30px 20px 30px;
 }
 .current-weather-data {
   display: flex;
@@ -39,7 +39,7 @@ main {
 }
 h1 {
   margin: 0;
-  font-size: 38px;
+  font-size: 34px;
   line-height: 48px;
   font-weight: 400;
 }
@@ -47,24 +47,44 @@ h1 {
 .current-rain-data {
   font-size: 14px;
   line-height: 20px;
-  margin: 2px 0 30px 0;
+  margin: 0 0 20px 0;
   opacity: 70%;
 }
 .current-temperature {
   display: flex;
 }
 .current-temperature-value {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 500;
 }
 .current-temperature-unit {
   font-size: 30px;
-  margin: 8px 0 0 5px;
+  margin: 7px 0 0 5px;
   font-weight: 500;
 }
 .current-weather-icon {
-  font-size: 150px;
-  margin: 0 30px 0 0;
+  font-size: 130px;
+  margin: -5px 30px 0 0;
+}
+.week-forecast-section {
+  background-color: #202b3b;
+  max-width: 95%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  color: #b6b9bc;
+}
+.air-conditions-details {
+  background-color: #202b3b;
+  max-width: 95%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 footer {
   border-top: 1px solid #202b3b;
