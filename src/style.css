@@ -80,13 +80,26 @@ h4 {
   margin: 0;
   color: #b6b9bc;
 }
-.air-conditions-details {
+.air-conditions-container {
   background-color: #202b3b;
   max-width: 95%;
   padding: 10px 20px;
   border-radius: 10px;
   margin-bottom: 30px;
 }
+.air-conditions-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.air-condition-heading {
+  color: #b6b9bc;
+}
+.air-data {
+  color: white;
+  font-size: 24px;
+}
+
 footer {
   border-top: 1px solid #202b3b;
   padding-top: 30px;
