@@ -67,7 +67,7 @@ h1 {
   height: 100px;
   width: 100px;
 }
-.week-forecast-section {
+.week-forecast-container {
   background-color: #202b3b;
   max-width: 95%;
   padding: 10px 20px;
@@ -77,9 +77,29 @@ h1 {
 h4 {
   font-size: 14px;
   font-weight: 400;
-  margin: 0;
+  margin: 10px 0 0 0;
   color: #b6b9bc;
 }
+
+.weather-forecast {
+  margin: 20px 30px;
+}
+
+.weather-forecast-date {
+  color: #b6b9bc;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.weather-forecast-icon {
+  margin: 5px 0;
+  font-size: 46px;
+}
+
+.forecast-low {
+  opacity: 0.5;
+}
+
 .air-conditions-container {
   background-color: #202b3b;
   max-width: 95%;

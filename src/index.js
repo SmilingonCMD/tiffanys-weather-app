@@ -25,8 +25,6 @@ function updateWeather(response) {
 }
 
 function formatDate(date) {
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
   let days = [
     "Sunday",
     "Monday",
