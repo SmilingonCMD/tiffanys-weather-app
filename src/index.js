@@ -22,6 +22,8 @@ function updateWeather(response) {
   icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
   humidityElement.innerHTML = `${humidity}%`;
   windSpeedElement.innerHTML = `${windSpeedMph} mph`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -52,7 +54,15 @@ function handleSearchInput(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "93ffacd3347f947bo5021d6t7b18ceab";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
@@ -78,4 +88,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchInput);
 
 searchCity("Los Angeles");
-displayForecast();
