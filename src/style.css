@@ -88,6 +88,7 @@ h4 {
 }
 
 .weather-forecast-date {
+  margin: 0;
   color: #b6b9bc;
   font-size: 14px;
   line-height: 20px;
@@ -96,7 +97,8 @@ h4 {
 
 .weather-forecast-icon {
   text-align: center;
-  font-size: 46px;
+  width: 88px;
+  height: 88px;
 }
 
 .weather-forecast-temperatures {
