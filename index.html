@@ -8,6 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
@@ -47,24 +55,27 @@
       <section>
         <div class="week-forecast-container">
           <h4>5-DAY FORECAST</h4>
-          <div class="weather-forecast" id="forecast">
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
       </section>
       <section>
         <div class="air-conditions-container">
           <h4>AIR CONDITIONS</h4>
           <div class="air-conditions-details">
-            <p class="air-condition-heading">
+            <div class="air-condition-heading">
+              <span class="material-symbols-outlined">
+                humidity_percentage
+              </span>
               Humidity
               <br />
               <strong class="air-data" id="humidity"></strong>
-            </p>
-            <p class="air-condition-heading">
+            </div>
+            <div class="air-condition-heading">
+              <span class="material-symbols-outlined"> air </span>
               Wind Speed
               <br />
               <strong class="air-data" id="wind-speed"></strong>
-            </p>
+            </div>
           </div>
         </div>
       </section>
