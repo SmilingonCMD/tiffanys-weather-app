@@ -83,12 +83,15 @@ h4 {
 
 .weather-forecast {
   margin: 20px 30px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .weather-forecast-date {
   color: #b6b9bc;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 20px;
+  margin-left: 10px;
 }
 
 .weather-forecast-icon {
