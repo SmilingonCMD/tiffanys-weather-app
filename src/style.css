@@ -2,12 +2,16 @@ body {
   background-color: #202b3b;
   color: white;
   font-family: "Rubik", sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url("../images/map-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .weather-app {
   background-color: #0a131e;
   max-width: 700px;
   min-width: 500px;
-  margin: 45px auto;
+  height: 100%;
+  margin: 60px auto 100px;
   padding: 30px;
   box-shadow: 5px 20px 50px rgba(255, 255, 255, 0.2);
   border-radius: 15px;
