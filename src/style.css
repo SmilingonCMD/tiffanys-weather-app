@@ -1,40 +1,57 @@
 body {
-  background-color: #202b3b;
   color: white;
   font-family: "Rubik", sans-serif;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url("../images/map-background.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("../images/map-background.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .weather-app {
-  background-color: #0a131e;
-  max-width: 700px;
-  min-width: 500px;
-  height: 100%;
+  max-width: 900px;
   margin: 60px auto 100px;
-  padding: 30px;
-  box-shadow: 5px 20px 50px rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 20px 50px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
 }
+
+.search-section {
+  background-color: #141415;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .search-form-input {
+  background: transparent url("../images/search.svg") no-repeat 16px;
   background-color: #202b3b;
   color: white;
-  border: none;
-  width: 85%;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  width: 500px;
+  padding: 10px 4px 10px 40px;
+  border-radius: 15px;
+  font-size: 16px;
 }
 
 .search-form-button {
   background-color: #202b3b;
   color: #b6b9bc;
-  border: none;
-  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 5px;
 }
+
+.material-symbols-outlined {
+  font-size: 18px !important;
+}
+
+.current-location {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 80%;
+}
+
 main {
   padding: 30px 30px 20px 30px;
 }
