@@ -93,7 +93,62 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHtml;
 }
 
+let geocode = {
+  reverseGeocode: function (latitude, longitude) {
+    var api_key = "1e51b4c01410458d8db77a8760a506bf";
+    var query = latitude + "," + longitude;
+    var api_url = "https://api.opencagedata.com/geocode/v1/json";
+
+    var request_url =
+      api_url +
+      "?" +
+      "key=" +
+      api_key +
+      "&q=" +
+      encodeURIComponent(query) +
+      "&pretty=1" +
+      "&no_annotations=1";
+
+    var request = new XMLHttpRequest();
+    request.open("GET", request_url, true);
+
+    request.onload = function () {
+      let currentLocation = document.querySelector("#current-location");
+
+      if (request.status === 200) {
+        var data = JSON.parse(request.responseText);
+        let userCity = data.results[0].components.city;
+        searchCity(userCity);
+        currentLocation.innerHTML = userCity;
+      } else if (request.status <= 500) {
+        console.log("unable to geocode! Response code: " + request.status);
+        var data = JSON.parse(request.responseText);
+        console.log("error msg: " + data.status.message);
+        currentLocation.innerHTML = "Unable to locate";
+      } else {
+        searchCity("Los Angeles");
+      }
+    };
+
+    request.onerror = function () {
+      console.log("unable to connect to server");
+    };
+
+    request.send();
+  },
+  getLocation: function () {
+    function success(data) {
+      geocode.reverseGeocode(data.coords.latitude, data.coords.longitude);
+    }
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, console.error);
+    } else {
+      searchCity("Los Angeles");
+    }
+  },
+};
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchInput);
 
-searchCity("Los Angeles");
+geocode.getLocation();
