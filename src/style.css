@@ -4,7 +4,6 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url("../images/map-background.jpeg");
   background-size: cover;
-  background-repeat: no-repeat;
 }
 .weather-app {
   max-width: 900px;
@@ -14,7 +13,7 @@ body {
 }
 
 .search-section {
-  background-color: #141415;
+  background-color: #202b3b;
   padding: 30px;
   border-radius: 15px;
   display: flex;
@@ -23,7 +22,7 @@ body {
 
 .search-form-input {
   background: transparent url("../images/search.svg") no-repeat 16px;
-  background-color: #202b3b;
+  background-color: #282a2d;
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.1);
   width: 500px;
@@ -33,7 +32,7 @@ body {
 }
 
 .search-form-button {
-  background-color: #202b3b;
+  background-color:#282a2d;
   color: #b6b9bc;
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
